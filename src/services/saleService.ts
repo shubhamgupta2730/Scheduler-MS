@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import Sale from '../models/saleModel';
+import Category from '../models/categoryModel';
 
 export const startSale = async () => {
   const now = new Date();

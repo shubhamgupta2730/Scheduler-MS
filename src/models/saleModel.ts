@@ -23,6 +23,7 @@ interface ISale extends Document {
   bundles: ISaleBundle[];
   isActive: boolean;
   isDeleted: boolean;
+  discountApplied: boolean;
   createdBy: mongoose.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
@@ -63,6 +64,7 @@ const saleSchema = new Schema<ISale>({
   bundles: [saleBundleSchema],
   isActive: { type: Boolean, default: true },
   isDeleted: { type: Boolean, default: false },
+  discountApplied: { type: Boolean, default: false },
   createdBy: { type: Schema.Types.ObjectId, ref: 'Admin', required: true },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
