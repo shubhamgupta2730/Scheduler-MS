@@ -36,6 +36,7 @@ const productSchema = new mongoose_1.Schema({
     categoryId: { type: mongoose_1.Schema.Types.ObjectId, ref: 'Category', default: null },
     sellerId: { type: mongoose_1.Schema.Types.ObjectId, ref: 'User', required: true },
     bundleIds: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Bundle' }],
+    images: [{ type: String, required: true }],
     isActive: { type: Boolean, default: true },
     isBlocked: { type: Boolean, default: false },
     isDeleted: { type: Boolean, default: false },
